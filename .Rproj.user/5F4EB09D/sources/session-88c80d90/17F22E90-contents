@@ -1,13 +1,20 @@
-library("msa")
-sequence1<- readDNAString
-library("seqinr")
-install.packages("seqinr")
-if(!require("BiocManager",quietly+TRUE))
-install.packages("seqinr")  
-BiocManager::install("msa",force=TRUE) 
-a
-library("BiocManager")
-force=TRUE
-?rMSA_INSTALL
-'??rMSA_INSTALL'
-BiocManager
+library(msa)
+library(Biostrings)
+library(seqinr)
+library(tidyr)
+library(dplyr)
+readDNAStringSet("/Users/MariaGarcia/Downloads/sequence-4.fasta") 
+seq1 <- readDNAStringSet("/Users/MariaGarcia/Downloads/sequence.fasta")
+seq2 <- readDNAStringSet("/Users/MariaGarcia/Downloads/sequence-2.fasta")
+seq3 <- readDNAStringSet("/Users/MariaGarcia/Downloads/sequence-3.fasta")
+seq4 <- readDNAStringSet("/Users/MariaGarcia/Downloads/sequence-4.fasta")
+seq5 <- readDNAStringSet("/Users/MariaGarcia/Downloads/sequence-5.fasta")
+seqs <- c(seq1,seq2,seq3,seq4,seq5)
+seqs
+names(sequences) <- c("S77384.1 cytochrome","FN431808.1 Squatina africana")
+nchar(seqs)
+print(seqs, show="complete") 
+alFreq <- alphabetFrequency(seqs)
+alFreq
+GC <- sum(alFreq[,"C"]) + sum(alFreq[,"G"]) 
+AT <- sum(alFreq[,"A"]) + sum(alFreq[,"T"])

@@ -75,7 +75,7 @@ d <- dist.alignment(albatrossAln2, "identity")
 d
 # this is a fancy way to compare only my 'epomophora' sample to the other samples in the matrix
 # and convert the numbers to a percentage 
-100 - (round(as.matrix(d)[, "epomophora_AF076049.1", drop=FALSE], digits = 2) * 100)
+100 - (round(as.matrix(d)[, "epomophora_AF0760 49.1", drop=FALSE], digits = 2) * 100)
 
 # translate one sample to an amino acid sequence
 # we again need to specify which package to use because the 'translate()' function 
@@ -89,5 +89,6 @@ print(seq_1_AA)
 # Biostrings has a write function, but not for fasta-formatted files
 albatrossAln_phyDat <- msaConvert(albatrossAln, type="phangorn::phyDat")
 write.phyDat(albatrossAln_phyDat, "Diomedea_exulans/albatross_alignment.fasta", format = "fasta")
+
 
 

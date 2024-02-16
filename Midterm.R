@@ -2,6 +2,7 @@
 setwd("Users/MariaGarcia/Downloads/Bioinformatics Eli")
 #Consiguientemente le damos nombre a nuestra sequencias que ya se encuentran agrupadas. En este caso opte por "Homo" ya que nuestras sequencias corresponden a una poblacion de 20 humanos.
 Homos <- readDNAStringSet("sequences.fasta Midterm.fasta")
+Mutant <-readDNAStringSet("seqdump.txt")
 #Ahora aplicamos msa y asigmanos la nueva valiable (opte por la misma)
 Homos <- msa(Homos)
 #Con esta siguiente funcion podemos determinar la longitud de nuestra sequencia (resultado = 642)
@@ -11,6 +12,16 @@ print(Homos, show="complete")
 alFreq <- alphabetFrequency(Homos)
 alFreq
 # Homo_sapiens 6  es el sujeto que parece presentar la mayoria de mutaciones en los que los nucleotidos han sido reeplazados en varias localizaciones a traves del alineamiento.
-#ran Blast for Homo 6 - Homo sapiens mutant hemoglobin beta chain (HBB) gene (100% adjession number)
-Mutated <-readDNAStringSet("Homo6")
-
+#ran Blast for Homo 6 - Homo sapiens mutant hemoglobin beta chain (HBB) gene 
+#Accession number-AY356351.1
+#Here I am translating the Homo 6 sequence into protein
+Mutant <-("seqdump.txt")
+names(seqs) <-("AY356351.1 Homo sapiens mutant") 
+Mutant <- msa(seqs)
+print(Mutantx)
+#Here I am printing the translated sequence into a fasta file which i saved to my Bioinformatics folder
+write.fasta(names="Mutantx", sequences=Mutantx, file.out="Mutant.fasta")
+# I ran Blastp to search the best match for my protein sequence 
+#result: hemoglobin subunit beta isoform X1 [Mandrillus leucophaeus]
+#Accession Number-XP_011830555.1
+#Afte doing some research I found using GenBank that this gene is associated with sickle beta thalassaemia

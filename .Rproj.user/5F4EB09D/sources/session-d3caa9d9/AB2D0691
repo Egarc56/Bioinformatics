@@ -3,7 +3,7 @@
     "path": "~/Downloads/Bioinformatics Eli/Midterm.R",
     "project_path": "Midterm.R",
     "type": "r_source",
-    "hash": "0",
+    "hash": "3383889229",
     "contents": "",
     "dirty": false,
     "created": 1708058382671.0,
@@ -13,15 +13,15 @@
         "tempName": "Untitled1",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "12,94",
-        "scrollLine": "0"
+        "cursorPosition": "26,0",
+        "scrollLine": "8"
     },
     "folds": "",
-    "lastKnownWriteTime": 1708115400,
+    "lastKnownWriteTime": 1708116934,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1708115400912,
+    "last_content_update": 1708116934208,
     "read_only": false,
     "read_only_alternatives": []
 }

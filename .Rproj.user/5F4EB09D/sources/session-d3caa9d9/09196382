@@ -1,26 +1,26 @@
 {
-    "id": "1891E907",
-    "path": "~/Downloads/Homework_5_answers.R",
+    "id": "09196382",
+    "path": "~/Desktop/Bioinformatics Eli/Homo 6.fasta",
     "project_path": null,
-    "type": "r_source",
+    "type": "text",
     "hash": "0",
     "contents": "",
-    "dirty": true,
-    "created": 1707865208414.0,
+    "dirty": false,
+    "created": 1708065377514.0,
     "source_on_save": false,
-    "relative_order": 2,
+    "relative_order": 6,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "91,0",
-        "scrollLine": "73"
+        "cursorPosition": "1,1",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1707865200,
+    "lastKnownWriteTime": 1708065186,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1708053359754,
+    "last_content_update": 1708065186,
     "read_only": false,
     "read_only_alternatives": []
 }

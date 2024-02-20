@@ -1,0 +1,4 @@
+install.packages("UniprotR")
+install.packages("protti")
+BiocManager::install("GenomicAlignment")
+install.packages("r3dmol")

@@ -17,12 +17,10 @@ alFreq
 #Here I am translating the Homo 6 sequence into protein
 setwd("/Users/MariaGarcia/Downloads")
 Mutant6 <- readDNAStringSet("Homosapien.fasta")
-Mutant.seqinr <- Biostrings::translate(Mutant6)
 MutantGene6 <- Biostrings::translate(Mutant6)
 print(MutantGene6)
 #Here I am printing the translated sequence into a fasta file using the write.fasta from the seqinr package which i saved to my Bioinformatics folder
 write.fasta(sequences = MutantGene6, names = MutantGene6, file.out = "MutantHomoX")
 # I used Blast and GenBank to search for the genetic diseases linked to this gene 
-#result: hemoglobin subunit beta isoform X1 [Mandrillus leucophaeus]
 #After doing some research I found that this gene is associated with sickle beta thalassaemia and sickle cell anemia. Yes, this individual has this genetic diseases
 

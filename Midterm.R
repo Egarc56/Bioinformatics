@@ -1,5 +1,5 @@
 #First we configure the working directory in the folder that contains our data
-setwd("Users/MariaGarcia/Downloads/Bioinformatics Eli")
+setwd("/Users/MariaGarcia/Downloads/Bioinformatics Eli")
 #Then I named the sequences that are already grouped. In this case I opted for "Homos" since the sequences correspond to a sample of 20 humans.
 Homos <- readDNAStringSet("sequences.fasta Midterm.fasta")
 #Now we apply msa and assign the new variable (opted for the same name)
@@ -15,15 +15,13 @@ alFreq
 #Result- Homo sapiens mutant hemoglobin beta chain (HBB) gene
 #Accession number-AY356351.1
 #Here I am translating the Homo 6 sequence into protein
-Mutant <-("seqdump.txt")
-names(seqs) <-("AY356351.1 Homo sapiens mutant") 
-Mutant <- msa(seqs)
-Mutant <-readDNAStringSet("seqdump.txt")
+setwd("/Users/MariaGarcia/Downloads")
+Mutant <- readDNAStringSet("sequence-7.fasta")
 Mutant.seqinr <- Biostrings::translate(Mutant)
-Mutantx <- Biostrings::translate(Mutant)
-print(Mutantx)
+MutantGene <- Biostrings::translate(Mutant)
+print(MutantGene)
 #Here I am printing the translated sequence into a fasta file which i saved to my Bioinformatics folder
-write.fasta(names="Mutantx", sequences=Mutantx, file.out="Mutant.fasta")
+write.fasta(sequences = MutantGene, names = MutantGene, file.out = "Mutant")
 # I ran Blastp to search the best match for my protein sequence 
 #result: hemoglobin subunit beta isoform X1 [Mandrillus leucophaeus]
 #Accession Number-XP_011830555.1
